@@ -1,0 +1,55 @@
+\documentclass[12pt]{ujarticle}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amscd,txfonts}
+\usepackage[all]{xy}
+\def\objectstyle{\displaystyle}
+\begin{document}
+\begin{eqnarray}
+\Delta f  = \frac{1}{\sqrt{g}}\partial_{\mu}\left(\sqrt{g}g^{\mu\nu}\partial_{\nu}f\right)
+\end{eqnarray}
+\begin{eqnarray}
+g \coloneqq \left|\mathrm{det}g_{\mu\nu}\right|
+\end{eqnarray}
+\begin{eqnarray}
+\nabla_{\mu}V^{\nu} = \partial_{\mu}V^{\nu} + \Gamma^{\nu}_{\mu\lambda}V^{\lambda}
+\end{eqnarray}
+\begin{eqnarray}
+\Delta f &=& \nabla_{\mu}\left(g^{\mu\nu}\partial_{\nu}f\right) \\
+&=& \partial_{\mu}\left(g^{\mu\nu}\partial_{\nu}f\right) + \Gamma^{\mu}_{\mu\lambda}\left(g^{\lambda\nu}\partial_{\nu}f\right) \\
+&=& \partial_{\mu}\left(g^{\mu\nu}\partial_{\nu}f\right) + \left(\partial_{\lambda}\log\sqrt{g}\right)\left(g^{\lambda\nu}\partial_{\nu}f\right) \\
+&=& \frac{1}{\sqrt{g}}\left\{\sqrt{g}\partial_{\mu}\left(g^{\mu\nu}\partial_{\nu}f\right) + \left(\partial_{\lambda}\sqrt{g}\right)\left(g^{\lambda\nu}\partial_{\nu}f\right)\right\} \\
+&=& \frac{1}{\sqrt{g}}\partial_{\mu}\left(\sqrt{g}g^{\mu\nu}\partial_{\nu}f\right)
+\end{eqnarray}
+\begin{eqnarray}
+\Gamma^{\lambda}_{\mu\nu} = \frac{g^{\lambda\rho}}{2}\left(\partial_{\mu}g_{\rho\nu} + \partial_{\nu}g_{\rho\mu} - \partial_{\rho}g_{\mu\nu}\right)
+\end{eqnarray}
+\begin{eqnarray}
+\Gamma^{\mu}_{\mu\lambda} &=& \frac{g^{\mu\rho}}{2}\left(\partial_{\mu}g_{\rho\lambda} + \partial_{\lambda}g_{\rho\mu} - \partial_{\rho}g_{\mu\lambda}\right) \\
+&=& \frac{g^{\mu\rho}}{2}\partial_{\lambda}g_{\rho\mu} \\
+&=& \frac{\left(g^{-1}\right)_{\mu\rho}}{2}\partial_{\lambda}g_{\rho\mu} \\
+&=& \partial_{\lambda}\log\sqrt{g}
+\end{eqnarray}
+
+
+
+
+
+\begin{eqnarray}
+A^{-1} = \frac{1}{\mathrm{det}A}\tilde{A}
+\end{eqnarray}
+\begin{eqnarray}
+\left(A^{-1}\right)_{ij} = \frac{1}{\mathrm{det}A}\left(\tilde{A}\right)_{ij}
+\end{eqnarray}
+\begin{eqnarray}
+\mathrm{det}A &=& \sum_{j}A_{ij}\left(\tilde{A}^\top\right)_{ij} \\
+&=& \sum_{j}A_{ij}\left(\tilde{A}\right)_{ji}
+\end{eqnarray}
+\begin{eqnarray}
+\frac{\partial \mathrm{det}A}{\partial x^{\mu}} &=& \sum_{i,j}\frac{\partial\mathrm{det}A}{\partial A_{ij}}\frac{\partial A_{ij}}{\partial x^{\mu}} \\
+&=& \sum_{i,j}\left(\tilde{A}\right)_{ji}\frac{\partial A_{ij}}{\partial x^{\mu}} \\
+&=& \mathrm{det}A\sum_{i,j}\left(A^{-1}\right)_{ji}\frac{\partial A_{ij}}{\partial x^{\mu}}
+\end{eqnarray}
+\begin{eqnarray}
+\sum_{i,j}\left(A^{-1}\right)_{ji}\frac{\partial A_{ij}}{\partial x^{\mu}} &=& \frac{1}{\mathrm{det}A}\frac{\partial\mathrm{det}A}{\partial x^{\mu}} \\
+&=& \frac{\partial}{\partial x^{\mu}}\log\left|\mathrm{det}A\right|
+\end{eqnarray}
+\end{document}

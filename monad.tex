@@ -1,0 +1,36 @@
+\documentclass[12pt]{ujarticle}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amscd}
+\usepackage[all]{xy}
+\def\objectstyle{\displaystyle}
+\begin{document}
+\[
+\xymatrix{
+  TTT \ar@{=>}[r]^{T\mu} \ar@{=>}[d]_{\mu T} & TT \ar@{=>}[d]^{\mu} \\
+  TT \ar@{=>}[r]_{\mu} & T
+}
+\]
+\[
+\xymatrix{
+  T \ar@{=>}[r]^{T\eta} \ar@{=>}[rd]_{1_T} & TT \ar@{=>}[d]^{\mu} & T \ar@{=>}[l]_{\eta T} \ar@{=>}[ld]^{1_T} \\
+  & T &
+}
+\]
+\[
+\xymatrix{
+  X \ar[r]^{f} \ar[d]_{\eta_X} & T(Y) \ar[d]^{T(\eta_Y)} \ar[rd]^{1_{T(Y)}} \\
+  T(X) \ar[r]_{T(f)} & TT(Y) \ar[r]_{\mu_Y} & T(Y)
+}
+\]
+\[
+\xymatrix{
+  TTT(W) \ar[r]^{T(\mu_W)} \ar[d]_{\mu_{T(W)}} & TT(W) \ar[d]^{\mu_W} \\
+  TT(W) \ar[r]_{\mu_W} & T(W)
+}
+\]
+\[
+\xymatrix{
+  TT(Z) \ar[r]^{TT(h)} \ar[d]_{\mu_Z} & TTT(W) \ar[d]^{\mu_{T(W)}} \\
+  T(Z) \ar[r]_{T(h)} & TT(W)
+}
+\]
+\end{document}

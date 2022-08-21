@@ -1,0 +1,76 @@
+\documentclass[12pt]{ujarticle}
+\usepackage{amsmath,amsfonts,amsthm,amssymb,amscd}
+\usepackage[all]{xy}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\def\objectstyle{\displaystyle}
+\begin{document}
+\[
+  \begin{array}{rccc}
+  f\colon &M                     &\longrightarrow& N                     \\
+          & \rotatebox{90}{$\in$}&               & \rotatebox{90}{$\in$} \\
+          & p                    & \longmapsto   & f(p)
+  \end{array}
+\]
+
+\[
+g\colon N \to \mathbb{R}
+\]
+
+\[
+  \begin{array}{rccc}
+  f^{\ast}\colon &(N \to \mathbb{R})    &\longrightarrow & (M \to \mathbb{R}) \\
+                 & \rotatebox{90}{$\in$}&                & \rotatebox{90}{$\in$} \\
+                 & g                    & \longmapsto    & f^{\ast}g \coloneqq f \circ g
+  \end{array}
+\]
+
+\[
+X \colon M \to TM \coloneqq \bigcup_{p \in M} T_p M
+\]
+
+\[
+C \colon \mathbb{R} \to M
+\]
+
+\[
+c(t) = (c^1(t), c^2(t), \cdots, c^m(t))
+\]
+
+\[
+X = X^{\mu}\partial_{\mu}
+\]
+
+\[
+X^{\mu}(c(t)) = \frac{dc^{\mu}(t)}{dt} \qquad (\mu = 1, \cdots, m)
+\]
+
+\[
+p = c(\tau) \in M
+\]
+
+\[
+f \colon M \to N
+\]
+
+\[
+  \begin{array}{rccc}
+  f_{\ast}\colon &T_p M                     &\longrightarrow& T_{f(p)}M                     \\
+          & \rotatebox{90}{$\in$}&               & \rotatebox{90}{$\in$} \\
+          & \left.\frac{dc}{dt}\right|_{t = \tau} = X(p) & \longmapsto   & \left.\frac{d(f\circ c)}{dt}\right|_{t = \tau} = X(f(p))
+  \end{array}
+\]
+
+\begin{align}
+((f_{\ast}X)g)(f(p)) &= \left.\frac{d(f\circ c(t))}{dt}\right|_{t = \tau} g \\
+                     &= \left.\frac{d}{dt} g(f\circ c(t))\right|_{t = \tau} \\
+                     &= \left.\frac{dc(t)}{dt}\right|_{t = \tau}(g\circ f)  \\
+                     &= X(g\circ f)(p) \\
+                     &= X(f^{\ast}g)(p)
+\end{align}
+
+\[
+f^{\ast}((f_{\ast}X)g) = X(f^{\ast}g)
+\]
+
+\end{document}
